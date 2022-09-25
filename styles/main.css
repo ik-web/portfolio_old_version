@@ -1,0 +1,560 @@
+/* Variables
+========================================================== */
+:root {
+  --body-bg-color: #fff;
+  --header-bg-color: linear-gradient(#3a25f7, #4575dd);
+  --header-logo-left: #6cfff8;
+  --header-logo-right: #ff9797;
+  --header-title: #fff;
+  --menu-bg-color: #4575dd;
+  --burger-btn-color: #fff;
+  --main-font-color: #494949;
+  --btn-bg-color: #2b5dc9;
+  --btn-bg-hover-color: #002fc9;
+  --light-font-color: #fff;
+  --link-bg-color: #002fc9;
+  --link-color: #fff;
+  --shadow-color: #000;
+  --shadow-light-color: #fff;
+  --logo-shadow-color: rgba(255, 255, 255, 0.5);
+  --gh-link-hover-bg: #000000;
+  --footer-bg-color: linear-gradient(#000158, #001ea3);
+  --hover-duration: 0.2s;
+}
+
+/* Normalize
+========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+  color: var(--main-font-color);
+
+  background: var(--body-bg-color);
+
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+a {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+
+span {
+  font-family: inherit;
+}
+
+/* General styles
+========================================================== */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header
+========================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+
+  background: var(--header-bg-color);
+
+  transition: box-shadow var(--hover-duration) linear;
+}
+
+.header.shadow {
+  box-shadow: 0 2px 10px 0 var(--shadow-color);
+}
+
+.header__inner {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 60px;
+}
+
+.header__logo {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 36px;
+  font-weight: 400;
+
+  transition: text-shadow var(--hover-duration) linear;
+}
+
+.header__logo:hover {
+  text-shadow: 1px 1px 4px var(--logo-shadow-color);
+}
+
+.header__logo--left {
+  color: var(--header-logo-left);
+
+  transition: color var(--hover-duration) linear;
+}
+.header__logo--right {
+  color: var(--header-logo-right);
+
+  transition: color var(--hover-duration) linear;
+}
+
+.header__logo:hover .header__logo--left {
+  color: var(--header-logo-right);
+}
+.header__logo:hover .header__logo--right {
+  color: var(--header-logo-left);
+}
+
+.header__title {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  color: var(--header-title);
+
+  transition: text-shadow var(--hover-duration) linear;
+}
+
+.header__title:hover {
+  text-shadow: 1px 1px 4px var(--shadow-light-color);
+}
+
+.header__link {
+  position: relative;
+
+  margin-right: 25px;
+  padding: 5px 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--link-color);
+}
+
+.header__link:last-child {
+  margin-right: 0;
+}
+
+.header__link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 2px;
+
+  background: var(--link-color);
+  
+  transition: width var(--hover-duration) linear;
+}
+
+.header__link:hover.header__link:after {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .header__menu {
+      width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {font-size: 20px;}
+
+  /* Header styles
+  ----------------------------- */
+  .header__inner {
+      background: var(--header-bg-color);
+  }
+
+  .header__menu {
+      position: absolute;
+      display: flex;
+      top: -60vh;
+      right: 0;
+      z-index: -1;
+
+      justify-content: center;
+      flex-direction: column;
+
+      width: 100%;
+      padding: 15px 0;
+
+      background: var(--menu-bg-color);
+      transition: top var(--hover-duration) linear;
+  } 
+
+  .header__menu.active {
+      top: 60px;
+  }
+
+  .header__link {
+      align-self: center;
+
+      padding: 15px;
+  }
+
+  .header__link:after {
+      display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .header__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__title {
+    font-size: 18px;
+  }
+}
+
+/* Main
+========================================================== */
+.main__item {
+  padding: 80px 0;
+}
+
+.main__item-title {
+  margin-bottom: 30px;
+
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.block--bottom-line {
+  border-bottom: 1px dashed var(--main-font-color);
+}
+
+.decoration-block {
+  background: var(--form-bg-color);
+  border: 5px double var(--form-border-color);
+  border-radius: 10px;
+}
+
+/* Section Hello
+========================================================== */
+.hello {
+  padding-top: 100px;
+}
+
+.hello__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hello__photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+
+  background: url("../img/hello/photo-bg.png") center center / contain;
+}
+
+.hello__photo {
+  width: 50%;
+}
+
+.hello__img {
+  border-radius: 25px;
+  box-shadow: 1px 1px 4px var(--shadow-color);
+}
+
+.hello__info {
+  width: 50%;
+  padding-right: 30px;
+}
+
+.hello__title {
+  margin-bottom: 10px;
+
+  font-size: 40px;
+}
+
+.hello__description {
+  margin-bottom: 40px;
+
+  line-height: 1.3;
+}
+
+.hello__contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.contacts__icon {
+  display: block;
+
+  font-size: 25px;
+
+  transition: transform var(--hover-duration) linear;
+}
+
+.contacts__icon:hover {
+  transform: scale(1.3);
+}
+
+.contacts__mail {
+  color: #ff5555;
+}
+
+.contacts__telegram {
+  color: #008cff;
+}
+
+.contacts__linkedin {
+  color: #2481be;
+}
+
+.contacts__github {
+  color: black;
+}
+
+.hello__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--light-font-color);
+  text-transform: uppercase;
+
+  background: var(--btn-bg-color);
+
+  border: 2px solid var(--btn-bg-color);
+  border-radius: 5px;
+
+  transition: background var(--hover-duration) linear, border var(--hover-duration) linear;
+}
+
+.hello__button:hover,
+.hello__button:focus {
+  background: var(--btn-bg-hover-color);
+
+  border-color: var(--btn-bg-hover-color);
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .hello__photo {
+      width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hello__photo-wrapper {
+    order: 1;
+    width: 100%;
+  }
+
+  .hello__photo {
+    width: 50%;
+  }
+
+  .hello__info {
+    order: 2;
+
+    width: 100%;
+    padding-right: 0;
+    padding-top: 30px;
+
+    text-align: center;
+  }
+
+  .hello__contacts {
+    width: 200px;
+    margin: 0 auto 40px;
+  }
+
+  .hello__button {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .hello__title {
+    font-size: 28px;
+  }
+}
+
+/* Section Portfolio
+========================================================== */
+.portfolio__title {
+  display: none;
+}
+
+.portfolio__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin: 0 -5px;
+}
+
+.portfolio__item {
+  position: relative;
+
+  width: 33.33333%;
+  
+  border: 5px solid transparent;
+  overflow: hidden;
+}
+
+.portfolio__item-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+
+  font-size: 14px;
+  line-height: 1.6;
+  text-shadow: 0 1px 5px #000;
+  color: var(--link-color);
+
+  background: var(--link-bg-color);
+  opacity: 0;
+  transition: opacity var(--hover-duration) linear;
+}
+
+.portfolio__item:hover .portfolio__item-description {
+  opacity: 0.94;
+}
+
+.portfolio__item-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__item-image img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.portfolio__item-github {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+
+  border-radius: 50%;
+  transition: all var(--hover-duration) linear;
+}
+
+.portfolio__item-github:focus {
+  outline: none;
+}
+
+.portfolio__item-github-icon {
+  display: block;
+
+  font-size: 45px;
+  color: transparent;
+}
+
+.portfolio__item:hover .portfolio__item-github i {
+  color: var(--link-color);
+}
+.portfolio__item-github:hover {
+  box-shadow: 1px 1px 8px var(--shadow-color);
+  background: var(--gh-link-hover-bg);
+}
+
+@media (max-width: 991px) {
+  .portfolio__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio__item {
+    width: 100%;
+    margin-bottom: 40px;
+
+    border: none;
+  }
+
+  .portfolio__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Footer
+========================================================== */
+.footer {
+  display: flex;
+  align-items: center;
+
+  height: 70px;
+
+  font-size: 14px;
+  color: var(--light-font-color);
+
+  background: var(--footer-bg-color);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+}
+
+.footer__author {
+  margin-left: 5px;
+  
+  font-style: normal;
+}
+
+@media (max-width: 540px) {
+  .footer {
+      font-size: 16px;
+  }
+}
