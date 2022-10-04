@@ -30,7 +30,7 @@ I'm a frontend developer with a huge desire to learn new and improve. Currently,
 >- FreeCodeCamp (HTML, CSS, JavaScript)
 >- Learn.javascript.ru (JavaScript)
 >- Reactjs.org
->- CodeWars [[ 29 Kata Completed ]](https://www.codewars.com/users/ik-web)
+>- CodeWars [[ 34 Kata Completed ]](https://www.codewars.com/users/Ihor_IK)
 >- Books: You Don’t Know JS (Kyle Simpson), Clean code
 
 ### Education
