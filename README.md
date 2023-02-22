@@ -1,24 +1,28 @@
-<p align="center">
-  <img src="readme-title.png" width="400" alt="Title">
-</p>
+<h1 align="center">
+  Portfolio (old version)
+</h1>
 
 <p align="center">
-  <a href="https://ik-web.github.io/portfolio/">[> View portfolio page <]</a> 
+  <a href="https://ik-web.github.io/portfolio_old_version/" target="_blank">
+    >> View Portfolio <<
+  </a> 
 </p>
 
 ## Description:
 
 ### Summary:
 
-I'm a frontend developer with a huge desire to learn new and improve. Currently, I'm looking for a new challenging project to develop myself even more. I have profound knowledge of HTML5/CSS3 including preprocessors (Sass/Less), a good understanding of responsive web design, and proficiency in working with native JavaScript (Typescript) & Frameworks (React, Redux). Also, I'm ready to learn new technologies. Currently interested in NextJS, Vue, MobX. I have experience in website layout and developing interfaces for web applications. More than 10 years of experience in sports formed in me a good understanding that persistence and stable work lead to good results.
+> I’m a frontend developer with a desire to learn new and improve. Currently, I’m looking for a react developer position and new challenging projects to develop myself even more. I have profound knowledge of HTML and CSS including preprocessors (Sass/Less), a good understanding of responsive web design, and proficiency in working with native JavaScript, Typescript, frameworks and libraries such as React, Redux, MobX, Vue, Pinia, TailwindCSS, MUI, Formik, etc. I’m always ready to learn new technologies.
 
 ### Skills
 >- Typescript, JavaScript (ES2015 - 2019) 
->- React, Redux
->- HTML5, CSS3, Sass (SCSS), BEM, Bootstrap
+>- React, Redux, MobX
+>- Vue, Vuex
+>- HTML, CSS, Sass (SCSS), BEM
+>- Material UI, TailwindCSS, Bootstrap, Bulma
 >- Fetch, REST API, SQL
 >- Git/Github, NPM, Parcel, Gulp, Webpack
->- Algorithms: Solved 29 katas on CodeWars
+>- Algorithms: Solved 34 katas on CodeWars
 >- Basic OOP understanding
 >- VS Code, WebStorm, Photoshop, Figma, Avocode
 >- Chrome Developer Tools (incl. React), Trello, Jira
